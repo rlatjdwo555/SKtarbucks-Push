@@ -11,7 +11,6 @@ public class Push {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     private Long orderId;
-    private Date sendTime;
     private String msg;
 
     @PostPersist
@@ -51,13 +50,4 @@ public class Push {
     public void setMsg(String msg) {
         this.msg = msg;
     }
-
-    public void setSendTime(Date sendTime){
-        this.sendTime = sendTime;
-    }
-
-    public Date getSendTime(){
-        return snedTime;
-    }
-
 }
