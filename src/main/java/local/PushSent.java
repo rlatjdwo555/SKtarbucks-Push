@@ -6,6 +6,7 @@ public class PushSent extends AbstractEvent {
     private Long id;
     private Long orderId;
     private String msg;
+    private Date sendTime;
 
     public Long getId() {
         return id;
@@ -29,5 +30,13 @@ public class PushSent extends AbstractEvent {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public void setSendTime(Date sendTime){
+        this.sendTime = sendTime;
+    }
+
+    public Date getSendTime(){
+        return snedTime;
     }
 }

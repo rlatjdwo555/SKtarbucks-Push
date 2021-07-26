@@ -29,6 +29,7 @@ public class PolicyHandler{
         Push push = new Push();
         push.setOrderId(canceled.getId());
         push.setMsg("주문하신 음료가 취소되었습니다.");
+        push.setSendTime(new Date());
         pushRepository.save(push);
     }
 
@@ -42,6 +43,7 @@ public class PolicyHandler{
         Push push = new Push();
         push.setOrderId(deliveryStarted.getOrderId());
         push.setMsg("주문하신 음료의 배달이 시작되었습니다.");
+        push.setSendTime(new Date());
         pushRepository.save(push);
     }
 
@@ -55,6 +57,7 @@ public class PolicyHandler{
         Push push = new Push();
         push.setOrderId(deliveryCompleted.getOrderId());
         push.setMsg("주문하신 음료의 배달이 완료되었습니다.");
+        push.setSendTime(new Date());
         pushRepository.save(push);
     }
 
@@ -67,6 +70,7 @@ public class PolicyHandler{
             
         Push push = new Push();
         push.setOrderId(productionChanged.getOrderId());
+        push.setSendTime(new Date());
 
         switch (productionChanged.getStatus()){
             case "MAKING":
