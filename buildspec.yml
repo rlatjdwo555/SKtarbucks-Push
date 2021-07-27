@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     _PROJECT_NAME: "pushmanage"
-    _ECR_NAME: "user07" 
+    _ECR_NAME: "user07"
     _NAMESPACE: "skcc-ns" 
     _AWS_REGION: "ap-northeast-1"
 
